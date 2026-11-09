@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-serif: 'Fraunces', serif;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+
+    /* Default Theme: Warm Protea */
+    --theme-bg: #FAF8F5;
+    --theme-card: #FFFFFF;
+    --theme-card-subtle: #F4EFEA;
+    --theme-border: #EADBCE;
+    --theme-border-subtle: rgba(26, 29, 26, 0.08);
+    --theme-text: #191E1A;
+    --theme-text-muted: #5E6962;
+    --theme-accent: #C2562E;
+    --theme-accent-hover: #AB4823;
+    --theme-accent-soft: rgba(194, 86, 46, 0.09);
+    --theme-tag-bg: #EFE9E1;
+    --theme-kicker: #A84925;
+  }
+
+  [data-palette="highveld"] {
+    --theme-bg: #FAF7F0;
+    --theme-card: #FFFFFF;
+    --theme-card-subtle: #F5EFE0;
+    --theme-border: #E8DCC8;
+    --theme-border-subtle: rgba(30, 30, 30, 0.08);
+    --theme-text: #1C1B17;
+    --theme-text-muted: #666155;
+    --theme-accent: #C47814;
+    --theme-accent-hover: #A6630C;
+    --theme-accent-soft: rgba(196, 120, 20, 0.1);
+    --theme-tag-bg: #EFE5D0;
+    --theme-kicker: #A6630C;
+  }
+
+  [data-palette="jacaranda"] {
+    --theme-bg: #F9F7FA;
+    --theme-card: #FFFFFF;
+    --theme-card-subtle: #F1EDF5;
+    --theme-border: #E4DCEB;
+    --theme-border-subtle: rgba(28, 24, 36, 0.08);
+    --theme-text: #1B1824;
+    --theme-text-muted: #625D73;
+    --theme-accent: #6C498C;
+    --theme-accent-hover: #583973;
+    --theme-accent-soft: rgba(108, 73, 140, 0.1);
+    --theme-tag-bg: #EDE6F3;
+    --theme-kicker: #583973;
+  }
+
+  [data-palette="tablemountain"] {
+    --theme-bg: #F6F8F6;
+    --theme-card: #FFFFFF;
+    --theme-card-subtle: #EDF3EE;
+    --theme-border: #DDE8DF;
+    --theme-border-subtle: rgba(22, 34, 27, 0.08);
+    --theme-text: #142018;
+    --theme-text-muted: #506659;
+    --theme-accent: #256E52;
+    --theme-accent-hover: #1C553F;
+    --theme-accent-soft: rgba(37, 110, 82, 0.1);
+    --theme-tag-bg: #E1EBE3;
+    --theme-kicker: #1C553F;
+  }
+
+  [data-palette="obsidian"] {
+    --theme-bg: #121413;
+    --theme-card: #1A1D1B;
+    --theme-card-subtle: #232724;
+    --theme-border: #2D332F;
+    --theme-border-subtle: rgba(255, 255, 255, 0.08);
+    --theme-text: #F3F5F4;
+    --theme-text-muted: #9EABA2;
+    --theme-accent: #CCA84D;
+    --theme-accent-hover: #B89337;
+    --theme-accent-soft: rgba(204, 168, 77, 0.14);
+    --theme-tag-bg: #272C29;
+    --theme-kicker: #CCA84D;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--theme-bg);
+    color: var(--theme-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-mono-numbers {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom scrollbar and subtle transitions */
+html {
+  scroll-behavior: smooth;
+}

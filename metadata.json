@@ -1,0 +1,6 @@
+{
+  "name": "Auntie & Uncle — Household Care Marketplace",
+  "description": "An award-winning household help marketplace connecting South African homes with trusted independent cleaners, childcare providers, home cooks, gardeners, and handymen.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
