@@ -5,6 +5,18 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    export default defineConfig(() => {
+  return {
+    base: '/Auntie---Uncle/', // 👈 ADD THIS LINE HERE
+    plugins: [react(), tailwindcss()],
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, '.'),
+      },
+    },
+    server: {
+      // HMR is disabled in AI Studio via DISABLE_HMR env var.
+// ... rest of the file
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
